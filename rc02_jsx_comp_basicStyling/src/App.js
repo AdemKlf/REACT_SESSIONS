@@ -25,6 +25,7 @@ import Header from "./components/Header";
 function App() {
   return (
     //*JSX
+    //? stillendirme yapilmaycaksa container icin <> kullanilkabilir.
     <>
       <Header />
       <Footer />
