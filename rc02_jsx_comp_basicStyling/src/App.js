@@ -18,6 +18,7 @@ import React from "react";
 // //! herhangi bir element kullanilabilir.
 
 //? App componentinin function declaration ile tanimlanmasi
+
 function App() {
   return <h1>JSX & COMPONENT & BASİC STYLING</h1>;
 }
