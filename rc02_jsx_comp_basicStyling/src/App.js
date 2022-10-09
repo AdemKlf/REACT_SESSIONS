@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "./components/Footer";
 // import Content from "./components/Content";
 // import Footer from "./components/Footer";
 // import Header from "./components/Header";
@@ -22,7 +23,13 @@ import Header from "./components/Header";
 //? App componentinin function declaration ile tanimlanmasi
 
 function App() {
-  return <Header />;
+  return (
+    //*JSX
+    <>
+      <Header />
+      <Footer />
+    </>
+  );
 }
 
 export default App;
