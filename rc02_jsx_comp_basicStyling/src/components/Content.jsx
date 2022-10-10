@@ -12,7 +12,7 @@
 //?Harici stillendirme dosyasi
 import "./Content.css";
 // ? Dahili bir resim eklemek icin import yapmak gereklidir.
-// import img2 from "../img/";
+import img2 from "../img/spring2.jpg";
 
 const Content = () => {
   //* JS alanı
@@ -34,7 +34,7 @@ const Content = () => {
         src="https://cdn.pixabay.com/photo/2017/02/15/13/40/tulips-2068692__340.jpg"
         alt="img1"
       />
-      {/* <img style={imgStyle} src="{img2}" alt="img2" /> */}
+      <img style={imgStyle} src={img2} alt="img2" />
 
       <p className="par-1">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, quaerat
