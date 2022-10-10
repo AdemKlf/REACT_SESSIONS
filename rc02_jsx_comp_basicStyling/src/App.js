@@ -1,8 +1,6 @@
 import React from "react";
+import Content from "./components/Content";
 import Footer from "./components/Footer";
-// import Content from "./components/Content";
-// import Footer from "./components/Footer";
-// import Header from "./components/Header";
 
 // //? React,JSX kullanmaktadir.
 // //? JSX'de, HTMl elementleri dogrudan JS icerisinde kullanilabilir
@@ -25,9 +23,10 @@ import Header from "./components/Header";
 function App() {
   return (
     //*JSX
-    //? stillendirme yapilmaycaksa container icin <> kullanilkabilir.
+    //? stillendirme yapilmaycaksa container icin <> kullanilkabilir. Aksi halde div e alınması gerekir.
     <>
       <Header />
+      <Content />
       <Footer />
     </>
   );

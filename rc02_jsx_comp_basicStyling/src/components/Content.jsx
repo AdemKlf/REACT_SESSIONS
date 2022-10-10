@@ -9,8 +9,10 @@
 //* class isimleri icin className kullanilir.
 //* Material UI, Styled Component, Sass, Bootstrap v.b harici kutuphaneler kullanilabilir.
 
+//?Harici stillendirme dosyasi
+import "./Content.css";
 // ? Dahili bir resim eklemek icin import yapmak gereklidir.
-import img2 from "../img/spring2.jpg";
+// import img2 from "../img/";
 
 const Content = () => {
   //* JS alanı
@@ -26,10 +28,14 @@ const Content = () => {
         React, Kullanici arabirimi tasarlamak icin kullanilan bir JS
         kütüphanesidir.
       </p>
+
       <img
+        style={imgStyle}
         src="https://cdn.pixabay.com/photo/2017/02/15/13/40/tulips-2068692__340.jpg"
         alt="img1"
       />
+      {/* <img style={imgStyle} src="{img2}" alt="img2" /> */}
+
       <p className="par-1">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, quaerat
         exercitationem repellendus, perspiciatis quo beatae magni distinctio
@@ -41,4 +47,4 @@ const Content = () => {
   );
 };
 
-export default Content;
+export default Content; //? Dış dünyadan kullanilabilir hale geitirir.
