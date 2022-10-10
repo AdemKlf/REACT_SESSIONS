@@ -1,14 +1,26 @@
-import Msg from "./Msg";
+import React from "react";
+// import Msg from "./components/Msg";
+import Person from "./components/Person";
+// import data from "./data";
 
-const Person = (props) => {
-  const { name, img, tel } = props;
+//? Otomatik import çift tık + ctrl space
+
+function App() {
   return (
-    <div style={{ textAlign: "center" }}>
-      <Msg name={name} />
-      <img style={{ width: "200px" }} src={img} alt="img1" />
-      <p>{tel}</p>
+    <div>
+      <Person />
     </div>
+    // <div>
+    //   {data.map((person) => (
+    //     <Person
+    //       key={person.name}
+    //       name={person.name}
+    //       img={person.img}
+    //       tel={person.tel}
+    //     />
+    //   ))}
+    // </div>
   );
-};
+}
 
-export default Person;
+export default App;

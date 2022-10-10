@@ -1,8 +1,6 @@
 const Msg = ({ name }) => {
-  //   console.log(props);
-
-  //! Destructurimg
-  //   const { name } = props;
+  //! Destructuring
+  // const { name } = props;
   return (
     <div>
       <h3>Merhaba {name}</h3>
@@ -10,5 +8,4 @@ const Msg = ({ name }) => {
     </div>
   );
 };
-
 export default Msg;
