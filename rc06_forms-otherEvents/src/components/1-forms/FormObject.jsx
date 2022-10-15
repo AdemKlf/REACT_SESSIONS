@@ -19,7 +19,10 @@ const FormObject = () => {
     `);
   };
   const handleForm = (e) => {
-    console.log(e.target);
+    console.log(e.target.value);
+    console.log(e.target.name);
+    console.log(e.target.id);
+    setFormValues({ ...formValues, [e.target.id]: e.target.value });
   };
 
   return (
