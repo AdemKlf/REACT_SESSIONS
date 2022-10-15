@@ -17,7 +17,7 @@ class Counter extends Component {
 
     //! count state'ine baslangic degeri atadik
     this.state = {
-      count: props.count || 0,
+      count: props.count || 5,
     };
     //? increment metodunun Counter class'ina baglanmasi (bind)
     this.increment = this.increment.bind(this);
@@ -42,10 +42,14 @@ class Counter extends Component {
     return (
       <div className="container text-center mt-4">
         <h1>CLASSFUL COMPONENTS</h1>
+
         <h2 className="display-4 text-danger">COUNT:{this.state.count}</h2>
+
         <button onClick={this.increment} className="btn btn-success">
           INC
         </button>
+
+        {/* <button onClick={} className="btn btn-dark">CLR</button> */}
 
         <button onClick={this.decrement} className="btn btn-danger">
           DEC
