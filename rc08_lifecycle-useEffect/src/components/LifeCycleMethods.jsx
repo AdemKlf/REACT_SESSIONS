@@ -1,7 +1,7 @@
-//?==================================================================
-//?                         LIFECYCLE METOTLARI
-//?          https://reactjs.org/docs/react-component.html
-//?==================================================================
+//?=============================================================
+//?                 LIFECYCLE METOTLARI
+//?      https://reactjs.org/docs/react-component.html
+//?=============================================================
 
 //* Lifecycle metotlari componetnlerin DOM'da varoldugu sure boyunca
 //* uzerinde islem yapmamizi imkan saglayan ozel React mototlaridir.
@@ -9,7 +9,6 @@
 //* guncellendiginde veya DOM'dan kaldirildiginda bir seyler yapmak icin
 //* lifecycle metotlari kullanilabilir.
 //* En bilindik lifecycle metodu render() metodudur
-//* Developer ların uygulamaları daha kolay yazmaları için çıkarılmıştır, ilk olarak özellikle class lar için
 
 //* Bir component'in olsuturulmasi (constructor,
 //* Bir componentin DOM agacina eklenmesinin sonrasi(componentDidMount)
@@ -22,7 +21,7 @@ import React from "react";
 class LifeCycleMethods extends React.Component {
   //! 1-) Bir componentin olsuturulmasinda cagrilir
   constructor(props) {
-    console.log("Constructer runnig");
+    console.log("Constructor running");
     super(props);
     this.state = {
       count: 0,
@@ -42,11 +41,14 @@ class LifeCycleMethods extends React.Component {
     console.log("Mounted");
   }
 
+  //! 4-) Bu metot ilk render haric diger tüm render'lardan sonra cagrilir.
+  //!  prevState ve prevProps degerlerini parametre olarak alabilir.
   componentDidUpdate(prevProps, prevState) {
     console.log("Updated");
     // console.log(prevState.count);
   }
 
+  //! 5-) Bir component DOM agacindan kaldiriltiktan hemen sonra cagirlir.
   componentWillUnmount() {
     console.log("Unmounted");
   }
