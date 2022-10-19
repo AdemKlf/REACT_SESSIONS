@@ -1,7 +1,12 @@
 import { FaEdit } from "react-icons/fa";
 import { AiFillDelete } from "react-icons/ai";
+import axios from "axios";
 
 const TutorialList = ({ tutorials }) => {
+  const deleteTutorial = async (id) => {
+    const url = "https://tutorials-api-cw.herokuapp.com/api/tutorials";
+    await axios.delete(url, id);
+  };
   return (
     <div className="container mt-4">
       <table className="table table-striped">

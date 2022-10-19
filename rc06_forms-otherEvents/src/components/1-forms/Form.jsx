@@ -1,17 +1,16 @@
 import { useState } from "react";
 
 const Form = () => {
+  // const [username, setUsername] = useState("Mehmet");
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault(); //! Submit in default davranışı olan refresh ve value silme işlemlerini durdurur. Bu işlmden sonra value silme işlemi ise setUsername("");setEmail("");setPassword(""); ile sıfırlanarak silinir.
     console.log(e.target);
     console.log("Submitted");
-    alert(`username: ${username}
-          email:${email},
-          password:${password}
+    alert(` 
     `);
     setUsername("");
     setEmail("");
@@ -22,7 +21,7 @@ const Form = () => {
     console.log(e.target.value);
     setUsername(e.target.value);
   };
-
+  //?Bootstrap den büyük kod aldıgimizda html to jsx compiler da dönüştürme yapilabilir.
   return (
     <form onSubmit={handleSubmit}>
       <h1 className="display-5 text-danger">FORMS</h1>
@@ -36,7 +35,7 @@ const Form = () => {
           className="form-control"
           id="username"
           value={username}
-          onChange={handleUsername}
+          onChange={handleUsername} //!value kullanildiginde onChange kullandığımız değişkenin değerinin değişmesi için kullanilir.
         />
       </div>
       <div className="mb-3">
