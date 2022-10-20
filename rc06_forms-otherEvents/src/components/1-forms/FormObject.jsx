@@ -8,6 +8,7 @@ const FormObject = () => {
   });
 
   const { username, password, email } = formValues;
+  //! çok sayida state birleştirilerek tek bir state haline getirilir ve bu state tüm elemanlarda kullanilir
 
   const handleSubmit = (e) => {
     e.preventDefault();
