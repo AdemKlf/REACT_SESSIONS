@@ -4,12 +4,21 @@ import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import People from "./pages/People";
 import NotFound from "./pages/NotFound";
+import { Routes, Route } from "react-router-dom";
+import Paths from "./pages/Paths";
 
 function App() {
   return (
     <>
       <Nav />
-      <Home />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/people" element={<People />} />
+        <Route path="/paths" element={<Paths />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/*" element={<NotFound />} />
+      </Routes>
+
       <People />
       <Contact />
       <NotFound />
