@@ -1,7 +1,8 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-const Header = styled.header`
-background-color: 
+const StyledHeader = styled.header`
+  background-color: ${({ theme }) => theme.colors.header};
+  padding: 4rem 0;
 `;
 
-export default Header;
+export default StyledHeader;
