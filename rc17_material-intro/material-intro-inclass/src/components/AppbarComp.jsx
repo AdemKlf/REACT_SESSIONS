@@ -26,7 +26,8 @@ function AppbarComp() {
   };
 
   return (
-    <AppBar position="static" sx={{ background: " #eee", color: "black" }}>
+    <AppBar position="static" color="secondary">
+      {/* <AppBar position="static" sx={{ background: " #eee", color: "red" }}> */}
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <img
@@ -35,7 +36,7 @@ function AppbarComp() {
             alt=""
           />
           {/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
-          {/* <Typography
+          <Typography
             variant="h6"
             noWrap
             component="a"
@@ -51,7 +52,7 @@ function AppbarComp() {
             }}
           >
             LOGO
-          </Typography> */}
+          </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
