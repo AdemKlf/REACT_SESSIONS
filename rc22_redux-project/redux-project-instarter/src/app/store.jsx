@@ -8,5 +8,4 @@ const store = configureStore({
     news: newsReducer,
   },
 });
-
 export default store;
