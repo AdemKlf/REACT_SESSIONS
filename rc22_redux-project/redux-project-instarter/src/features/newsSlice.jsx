@@ -18,14 +18,15 @@ const initialState = {
 export const getNews = createAsyncThunk(
   "getNews",
 
-  async () => {
+  async (thunkAPI, { rejectWithValue }) => {
     const API_KEY = "d610f87f486f4f2c892578c04e1dc385";
-    const url = `https://newsapi.org/v2/top-headlines?country=tr&apiKey=${API_KEY}`;
+    const url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`;
     try {
       const { data } = await axios(url);
       return data.articles;
     } catch (error) {
       console.log(error);
+      return rejectWithValue("Something went wrong");
     }
   }
 );
@@ -48,9 +49,9 @@ const newsSlice = createSlice({
         state.newsList = payload;
         state.loading = false;
       })
-      .addCase(getNews.rejected, (state, {}) => {
+      .addCase(getNews.rejected, (state, { payload }) => {
         state.loading = false;
-        state.error = true;
+        state.error = payload;
       });
   },
 });
